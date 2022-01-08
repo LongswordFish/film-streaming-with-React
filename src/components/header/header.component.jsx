@@ -19,16 +19,16 @@ const Header = ()=>(
             <div className="navbar-wrapper">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="/">Home</a>
+                        <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="/movie/listing/movies">Movies</a>
+                        <Link className="nav-link active" aria-current="page" to="/movies/movieslisting">Movies</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="/movie/listing/TVs">TVs</a>
+                    <Link className="nav-link active" aria-current="page" to="/movies/tvslisting">TVs</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="/user/admin" >My FishStreaming</a>
+                        <Link className="nav-link active" aria-current="page" to="/user/admin" >My FishStreaming</Link>
                     </li>
                 </ul>
             </div>

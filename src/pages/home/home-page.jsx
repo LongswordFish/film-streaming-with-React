@@ -10,7 +10,7 @@ const HomePage = ()=>{
 
     const featuredMovies = getFeaturedMovies().filter((movie,index)=>index<6);
     const featuredTVs = getFeaturedTVs().filter((movie,index)=>index<6);
-    const specialMovies = getCrimes().filter((movie,index)=>index<6);
+    const specialMovies = getCrimes().filter((movie,index)=>index<5);
 
     return(
         <div className="home-page">
@@ -38,6 +38,9 @@ const HomePage = ()=>{
                             <p className="card-text"><small className="text-muted">Only $5.99</small></p>
                     </div>
                 </div>
+                {
+                    specialMovies.map(movie=>(<ItemCard className="card" key={movie.id} item={movie}/>))
+                }
             </div>
         </div>
     );

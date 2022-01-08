@@ -16,7 +16,7 @@ const ItemCard = ({item})=>{
                 <span>Rent:${price_to_rent }</span>
                 <span>Buy:${price_to_purchase }</span>
             </p>
-            <Link to={`/movie/movies/${id}`}><img src={image1} className="card-img" alt="..." /></Link>
+            <Link to={`/movies/${id}`}><img src={image1} className="card-img" alt="..." /></Link>
             <div className="card-body">
                 <h5 class="card-title">{movie_title }</h5>
             </div>

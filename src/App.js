@@ -4,11 +4,9 @@ import {Route, Routes, Navigate} from 'react-router-dom';
 import Header from './components/header/header.component';
 import Footer from './components/footer/footer.component';
 import HomePage from './pages/home/home-page'
-
+import MoviesPage from './pages/movie/movie-page';
 
 import './App.css';
-
-const ShopPage = ()=>(<div>Shop</div>);
 
 
 class App extends React.Component{
@@ -18,8 +16,8 @@ class App extends React.Component{
       <div className="App">
           <Header />
           <Routes>
-            <Route exact path='/' element={<HomePage />}/>
-            <Route path='/shop/*' element={<ShopPage />}/>
+            <Route path='/' element={<HomePage />}/>
+            <Route path='/movies/*' element={<MoviesPage />}/>
             {/* <Route exact path='/signin' element={<SignInAndSignUpPage />}/> */}
             {/* <Route exact path='/signin'  element={currentUser!==null?(<Navigate to='/' />):(<SignInAndSignUpPage />)} />
             <Route exact path='/checkout' element={<CheckoutPage />}/> */}
