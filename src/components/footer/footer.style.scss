@@ -1,0 +1,53 @@
+.footer{
+    text-align: center;
+
+    .row{
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+
+        .col-lg-4{
+            flex: 1 1 auto;
+
+            h5{
+                font-size: 1.5em;
+            }
+
+            ul{
+                padding-left: 0;
+                li{
+                    list-style-type: none;
+                    margin: 10px auto;
+                }
+            }
+
+            .icon-wrapper{
+                /* margin-top: 10px; */
+                width:150px;
+                display: flex;
+                justify-content: space-between;
+                margin: 10px auto;
+              }
+              
+              @media only screen and (min-device-width: 1025px) {
+              
+                .icon-wrapper{
+                  /* margin-top: 10px; */
+                  width:150px;
+                  display: flex;
+                  justify-content: space-between;
+
+                }
+              }
+              
+        }
+    }
+
+
+    img{
+        height:24px; 
+        width:24px;
+    }
+}
+
+

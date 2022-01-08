@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import React from 'react';
+import {Route, Routes, Navigate} from 'react-router-dom';
+
+import Header from './components/header/header.component';
+import Footer from './components/footer/footer.component';
+import HomePage from './pages/home/home-page'
+
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const ShopPage = ()=>(<div>Shop</div>);
+
+
+class App extends React.Component{
+
+  render(){
+    return (
+      <div className="App">
+          <Header />
+          <Routes>
+            <Route exact path='/' element={<HomePage />}/>
+            <Route path='/shop/*' element={<ShopPage />}/>
+            {/* <Route exact path='/signin' element={<SignInAndSignUpPage />}/> */}
+            {/* <Route exact path='/signin'  element={currentUser!==null?(<Navigate to='/' />):(<SignInAndSignUpPage />)} />
+            <Route exact path='/checkout' element={<CheckoutPage />}/> */}
+          </Routes>
+
+          <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;

@@ -1,0 +1,31 @@
+.item-card{
+
+    text-align: center;
+    background-color: black;
+    color:white;
+    border-radius: 2%;
+    width: 200px;
+    height: 350px;
+
+    .card-text{
+        font-size: smaller; 
+        display:flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+        padding: auto;
+    }
+
+    .a{
+        margin: auto;
+        align-content: center;
+    }
+
+    .card-img{
+        margin-top: 0 auto auto auto;
+        height:250px;
+    }
+
+    h5.card-title{
+        text-align: center;
+    }
+}
