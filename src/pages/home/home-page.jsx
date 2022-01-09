@@ -1,16 +1,21 @@
 import React from "react";
 import ItemCard from "../../components/item-card/item-card.components";
+import { connect } from "react-redux";
+import { useSelector } from "react-redux";
 
 import "./homepage.style.scss";
 
-import fakeDB from "./FakeDB";
-import { getFeaturedMovies,getFeaturedTVs,getCrimes } from "./fakeDB.utils";
+import { selectFeaturedMovies,selectFeaturedTVs,selectSpecials } from "../../redux/movie/movie.selectors";
 
 const HomePage = ()=>{
 
-    const featuredMovies = getFeaturedMovies().filter((movie,index)=>index<6);
-    const featuredTVs = getFeaturedTVs().filter((movie,index)=>index<6);
-    const specialMovies = getCrimes().filter((movie,index)=>index<5);
+    const special = "Crime";
+
+    const featuredMovies =useSelector(selectFeaturedMovies).filter((movie,index)=>index<6);
+    const featuredTVs = useSelector(selectFeaturedTVs).filter((movie,index)=>index<6);
+    const specialMovies = useSelector(selectSpecials(special)).filter((movie,index)=>index<5);
+
+    console.log(specialMovies);
 
     return(
         <div className="home-page">

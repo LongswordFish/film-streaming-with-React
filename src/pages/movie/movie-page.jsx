@@ -3,9 +3,8 @@ import { Routes,Route } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 
-const MoviesListing = () =>(
-    <div>MoviesListing</div>
-)
+import ListingPage from "../listing/listing.component";
+
 
 const TVsListing = () =>(
     <div>TVsListing</div>
@@ -24,8 +23,7 @@ const MoviesPage = () => {
     return (
         <div className='movies-page'>
             <Routes>
-                <Route path='/moviesListing' element={<MoviesListing />} />
-                <Route path='/tvsListing' element={<TVsListing />} />
+                <Route path='/listing' element={<ListingPage/>} />
                 <Route path='/:movieid' element={<MovieItem/>} />
             </Routes>
         </div>

@@ -1,0 +1,29 @@
+.movie-listing{
+    .buttons-wrapper-in-listing{
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+
+            .movieListingButton{
+                font-size: large; 
+                color:black; 
+                font-weight: bolder;
+                list-style-type: none;
+                cursor: pointer;
+                padding-top: 15px;
+              }
+          
+          .delimter{
+            color:rgb(0, 195, 255); 
+            font-weight:bolder
+          }
+    }
+
+  .listing{
+    width: 80%;
+    display: grid;
+    margin: 20px auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}

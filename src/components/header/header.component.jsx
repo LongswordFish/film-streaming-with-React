@@ -22,10 +22,7 @@ const Header = ()=>(
                         <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link active" aria-current="page" to="/movies/movieslisting">Movies</Link>
-                    </li>
-                    <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" to="/movies/tvslisting">TVs</Link>
+                        <Link className="nav-link active" aria-current="page" to="/movies/listing">Movies&#38;TVs</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link active" aria-current="page" to="/user/admin" >My FishStreaming</Link>
