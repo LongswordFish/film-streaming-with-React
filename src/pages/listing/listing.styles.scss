@@ -21,9 +21,13 @@
     }
 
   .listing{
-    width: 80%;
+    width: 90%;
     display: grid;
     margin: 20px auto;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    .item-card{
+      margin-top: 20px;
+    }
   }
 }

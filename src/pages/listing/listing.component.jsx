@@ -3,16 +3,18 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { selectAllItems,selectAllMovies,selectAllTVs } from "../../redux/movie/movie.selectors";
 
-import AllListing from "../../components/all-listing/all-listing.component";
-import MoviesListing from "../../components/movies-listing/movies-listing.component";
+import ItemCard from '../../components/item-card/item-card.components';
+
 import "./listing.styles.scss";
 
 
 const ListingPage = () =>{
 
     const [type, setType] = useState("ALL");
+    const items = useSelector(selectAllItems);
 
-    return(
+
+    return (
         <div className="movie-listing">
             <div className="buttons-wrapper-in-listing">
                 <span className="movieListingButton" onClick={() => setType("MOVIE")} >Movies</span>
@@ -22,29 +24,28 @@ const ListingPage = () =>{
                 <span className="movieListingButton" onClick={() => setType("ALL")} >All</span>
             </div>
 
-            {
-                (type==="MOVIE")
-                ?<MoviesListing />
-                :<AllListing />
-            }
+            <div className="listing">
 
-{/* 
+                {
+                    (type === "ALL")
+                        ? (items.map(item => (
+                            <ItemCard key={item.id} item={item} />
+                        )))
+                        : (
+                            (type === "MOVIE")
+                                ? ((items.filter(item => item.type === "movie").map(item => (
+                                    <ItemCard key={item.id} item={item} />
+                                ))))
+                                : ((items.filter(item => item.type === "TV").map(item => (
+                                    <ItemCard key={item.id} item={item} />
+                                ))))
 
-                <div class="row" id="listing">
-
-                    <div class="card pic col-6 col-md-2 col-sm-3">
-                        <p class="card-text" style="font-size: smaller; display:flex;justify-content: space-between;">
-                            <span>Rent:${{ this.price_to_rent }}</span>
-                            <span>Buy:${{ this.price_to_purchase }}</span>
-                        </p>
-                        <a href="/movie/movies/{{this._id}}"><img src="/upload/{{this.small_picture}}" class="card-img" alt="..."></a>
-                        <div class="card-body">
-                            <h5 class="card-title">{{ this.movie_title }}</h5>
-                        </div>
-                    </div>
+                        )
+                }
 
 
-                </div> */}
+            </div>
+
         </div>
     )
 }
