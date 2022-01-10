@@ -5,7 +5,7 @@ import { selectAllItems,selectAllMovies,selectAllTVs } from "../../redux/movie/m
 
 import ItemCard from '../../components/item-card/item-card.components';
 
-import "./listing.styles.scss";
+import "./listing-page.styles.scss";
 
 
 const ListingPage = () =>{

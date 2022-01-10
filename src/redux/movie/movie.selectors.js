@@ -32,6 +32,11 @@ export const selectSpecials = special=>createSelector(
     movie => movie.movies.filter(movie=>movie.movie_type===special)
 )
 
+export const selectMovieById = id => createSelector(
+    [selectMovie],
+    movie => movie.movies.find(item=>item.id==id)
+)
+
 
 
 

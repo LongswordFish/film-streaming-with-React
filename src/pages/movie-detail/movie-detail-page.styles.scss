@@ -1,0 +1,33 @@
+#movieDetail_page{
+
+    .row{
+        width: 100%;
+        display: flex;
+
+        .cardInDetail{
+            height:600px;
+            width:400px;
+            padding-left: 25px;
+            padding-right: 25px;
+            margin-left: 0;
+            color:white; 
+            
+            .titileInDetail{
+                font-size: 2.3em;
+                font-weight: bolder;
+                padding-top: 150px;
+                color:gold;
+              
+              }
+
+            .button-wrapper-in-detail{
+                width: 95%;
+                display: flex;
+                justify-content: space-between;  
+                margin: 20px auto;
+            }
+        }
+    }         
+}
+
+  
