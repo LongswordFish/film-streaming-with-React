@@ -9,3 +9,7 @@ export const addItemToRentItems = (item) =>({
     type:CartActionTypes.ADD_ITEM_TO_RENT_ITEMS,
     payload:item
 });
+
+export const toggleCartHidden = () =>({
+    type:CartActionTypes.TOGGLE_CART_HIDDEN
+});

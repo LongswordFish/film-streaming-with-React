@@ -2,8 +2,9 @@ import CartActionTypes from "./cart.types";
 import { addPurchaseItemToCart,addRentItemToCart } from "./cart.utils";
 
 const INITIAL_STATE = {
+    hidden:true,
     purchased_items:[],
-    rented_items:[]
+    rented_items:[],
 };
 
 const CartReducer = (state=INITIAL_STATE, action)=>{
@@ -18,6 +19,11 @@ const CartReducer = (state=INITIAL_STATE, action)=>{
                 ...state,
                 rented_items:addRentItemToCart(state.rented_items,action.payload)
             }
+        case CartActionTypes.TOGGLE_CART_HIDDEN:
+            return {
+                ...state,
+                hidden:!state.hidden
+            };
         default:
             return state;
     }

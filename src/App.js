@@ -11,13 +11,13 @@ import './App.css';
 const i= 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png';
     
 
-const TryPage = () =>(
+const CheckoutPage = () =>(
   <div
   className="image"
   style={{
       backgroundImage:`url(${i})`
   }}>
-    hhh
+    CheckOutPage
   </div>
 );
 
@@ -31,10 +31,9 @@ class App extends React.Component{
           <Routes>
             <Route path='/' element={<HomePage />}/>
             <Route path='/movies/*' element={<MoviesPage />}/>
-            <Route path='/try' element={<TryPage />}/>
             {/* <Route exact path='/signin' element={<SignInAndSignUpPage />}/> */}
-            {/* <Route exact path='/signin'  element={currentUser!==null?(<Navigate to='/' />):(<SignInAndSignUpPage />)} />
-            <Route exact path='/checkout' element={<CheckoutPage />}/> */}
+            {/* <Route exact path='/signin'  element={currentUser!==null?(<Navigate to='/' />):(<SignInAndSignUpPage />)} /> */}
+            <Route exact path='/checkout' element={<CheckoutPage />}/>
           </Routes>
 
           <Footer />
