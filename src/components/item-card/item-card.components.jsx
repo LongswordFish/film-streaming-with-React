@@ -8,8 +8,6 @@ import image1 from "../../assets/images/extraction_small.webp";
 import "./item-card.styles.scss";
 
 
-//`../../assets/images/${small_picture}`
-
 const ItemCard = ({item})=>{
     const{price_to_rent,price_to_purchase,small_picture,movie_title,id} = item;
 

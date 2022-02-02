@@ -2,10 +2,7 @@ import React from "react";
 import { useSelector,useDispatch } from "react-redux";
 import './checkout-item.styles.scss';
 
-import { connect } from "react-redux";
 import { clearItemFromCart } from "../../redux/cart/cart.actions";
-
-import image1 from "../../assets/images/extraction_small.webp";
 
 const CheckoutItem = ({ item,isPurchase }) => {
     const dispatch = useDispatch();
@@ -13,7 +10,7 @@ const CheckoutItem = ({ item,isPurchase }) => {
     return (
         <div className="checkout-item">
             <div className="image-container">
-                <img alt='image-in-checkout-page' src={image1} />
+                <img alt='image-in-checkout-page' src={item.small_picture} />
             </div>
             <span className="name">{item.movie_title}</span>
             <span className="type">
