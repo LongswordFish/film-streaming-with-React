@@ -1,9 +1,5 @@
-import react from "react";
+
 import { Link } from "react-router-dom";
-
-import image1 from "../../assets/images/extraction_small.webp";
-
-
 
 import "./item-card.styles.scss";
 
