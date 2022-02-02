@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 import image1 from "../../assets/images/extraction_small.webp";
 
+
+
 import "./item-card.styles.scss";
+
 
 //`../../assets/images/${small_picture}`
 
@@ -16,7 +19,8 @@ const ItemCard = ({item})=>{
                 <span>Rent:${price_to_rent }</span>
                 <span>Buy:${price_to_purchase }</span>
             </p>
-            <Link to={`/movies/${id}`}><img src={image1} className="card-img" alt="..." /></Link>
+            <Link to={`/movies/${id}`}><img src={small_picture} className="card-img" alt="..." /></Link>
+            {/* <Link to={`/movies/${id}`}><img src={image1} className="card-img" alt="..." /></Link> */}
             <div className="card-body">
                 <h5 className="card-title">{movie_title }</h5>
             </div>

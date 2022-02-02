@@ -5,22 +5,11 @@ import Header from './components/header/header.component';
 import Footer from './components/footer/footer.component';
 import HomePage from './pages/home/home-page'
 import MoviesPage from './pages/movie/movie-page';
+import CheckoutPage from './pages/checkout/checkout-page';
+import SignInPage from './pages/sign-in/sign-in-page';
 
 import './App.css';
-
-const i= 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png';
-    
-
-const CheckoutPage = () =>(
-  <div
-  className="image"
-  style={{
-      backgroundImage:`url(${i})`
-  }}>
-    CheckOutPage
-  </div>
-);
-
+  
 
 class App extends React.Component{
 
@@ -31,7 +20,7 @@ class App extends React.Component{
           <Routes>
             <Route path='/' element={<HomePage />}/>
             <Route path='/movies/*' element={<MoviesPage />}/>
-            {/* <Route exact path='/signin' element={<SignInAndSignUpPage />}/> */}
+            <Route exact path='/signin' element={<SignInPage />}/>
             {/* <Route exact path='/signin'  element={currentUser!==null?(<Navigate to='/' />):(<SignInAndSignUpPage />)} /> */}
             <Route exact path='/checkout' element={<CheckoutPage />}/>
           </Routes>

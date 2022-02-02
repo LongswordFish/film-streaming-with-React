@@ -55,7 +55,7 @@ const MovieDetailPage = () => {
                 <div
                     className="bigPic"
                     style={{
-                        backgroundImage: `url('${imageLocation}')`,
+                        backgroundImage: `url('${movie.large_picture}')`,
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat',

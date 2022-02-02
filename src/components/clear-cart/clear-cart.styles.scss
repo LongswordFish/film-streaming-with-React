@@ -1,0 +1,26 @@
+.clear-cart-button {
+
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    background: linear-gradient(green 20%,green 90%);
+    border: 0px;
+    padding: 1px;
+    text-decoration: none;
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    position: relative;
+    padding: 0px 12px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-radius: 4px;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
