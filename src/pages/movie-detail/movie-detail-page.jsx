@@ -1,13 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { useState } from "react";
 import { useDispatch } from "react-redux";
 
 import CustomButton from "../../components/custom-button/custom-button.component";
-
-import bigImage from "../../assets/images/extraction_big.webp";
-import smallImage from "../../assets/images/extraction_small.webp";
 
 import { selectItemInCart} from "../../redux/cart/cart.selectors";
 import {selectMovieById} from "../../redux/movie/movie.selectors";

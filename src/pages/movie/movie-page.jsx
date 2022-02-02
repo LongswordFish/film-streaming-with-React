@@ -1,7 +1,4 @@
-import react from "react";
 import { Routes,Route } from "react-router-dom";
-import { useParams } from "react-router-dom";
-
 
 import ListingPage from "../listing/listing-page";
 import MovieDetailPage from "../movie-detail/movie-detail-page";

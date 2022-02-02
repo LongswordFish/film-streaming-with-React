@@ -1,7 +1,6 @@
-import react from "react";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { selectAllItems,selectAllMovies,selectAllTVs } from "../../redux/movie/movie.selectors";
+import { selectAllItems } from "../../redux/movie/movie.selectors";
 
 import ItemCard from '../../components/item-card/item-card.components';
 

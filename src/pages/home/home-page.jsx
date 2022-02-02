@@ -1,6 +1,5 @@
 import React from "react";
 import ItemCard from "../../components/item-card/item-card.components";
-import { connect } from "react-redux";
 import { useSelector } from "react-redux";
 
 import "./homepage.style.scss";
