@@ -11,7 +11,7 @@ const ListingPage = () =>{
 
     const [type, setType] = useState("ALL");
     const items = useSelector(selectAllItems);
-
+    
 
     return (
         <div className="movie-listing">

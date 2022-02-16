@@ -2,13 +2,14 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
+import { useEffect } from "react";
 
 import CustomButton from "../../components/custom-button/custom-button.component";
 
 import { selectItemInCart} from "../../redux/cart/cart.selectors";
-import {selectMovieById} from "../../redux/movie/movie.selectors";
+import {selectSingleFilm} from "../../redux/movie/movie.selectors";
 import { addItemToPurchaseItems, addItemToRentItems } from "../../redux/cart/cart.actions";
-
+import { getSingleFilmStart } from "../../redux/movie/movie.action";
 
 import './movie-detail-page.styles.scss';
 
@@ -16,16 +17,20 @@ import './movie-detail-page.styles.scss';
 const MovieDetailPage = () => {
 
     const params = useParams();
-    const movie = useSelector(selectMovieById(params.movieid));
+    
+    const dispatch = useDispatch();
+
+    useEffect(()=>{
+        dispatch(getSingleFilmStart(params.movieid));
+    },[dispatch,params.movieid]);
+
+    const movie = useSelector(selectSingleFilm(params.movieid));
     
     const movieAlreadyInCart = useSelector(selectItemInCart(params.movieid));
 
     console.log(movieAlreadyInCart);
-
-    const dispatch = useDispatch();
-
-    const imageLocation = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=1.00xw:0.756xh;0,0.0756xh&resize=980:*";
     
+
     const handleRent = (item)=>{
         if(window.confirm(`Are you sure you want to rent the movie for $${movie.price_to_rent}?`)){
             console.log("yes");
@@ -46,6 +51,7 @@ const MovieDetailPage = () => {
     }
     
     return (
+        movie?
         <div id="movieDetail_page">
             <div id="containerInDetail" className="row">
                 <div
@@ -82,6 +88,7 @@ const MovieDetailPage = () => {
             </div>
        
         </div>
+        :null
     );
 }
 

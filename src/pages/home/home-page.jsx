@@ -2,6 +2,9 @@ import React from "react";
 import ItemCard from "../../components/item-card/item-card.components";
 import { useSelector } from "react-redux";
 
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { getAllFilms,getAllFilmsStart } from "../../redux/movie/movie.action";
 import "./homepage.style.scss";
 
 import { selectFeaturedMovies,selectFeaturedTVs,selectSpecials } from "../../redux/movie/movie.selectors";
@@ -10,11 +13,15 @@ const HomePage = ()=>{
 
     const special = "Crime";
 
+    const dispatch = useDispatch();
+
     const featuredMovies =useSelector(selectFeaturedMovies).filter((movie,index)=>index<6);
     const featuredTVs = useSelector(selectFeaturedTVs).filter((movie,index)=>index<6);
     const specialMovies = useSelector(selectSpecials(special)).filter((movie,index)=>index<5);
 
-    console.log(specialMovies);
+    useEffect(()=>{
+        dispatch(getAllFilmsStart());
+    },[]);
 
     return(
         <div className="home-page">

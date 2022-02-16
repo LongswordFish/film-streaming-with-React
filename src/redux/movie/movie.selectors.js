@@ -19,12 +19,12 @@ export const selectAllTVs = createSelector(
 
 export const selectFeaturedMovies = createSelector(
     [selectAllMovies],
-    movies => movies.filter(movie=>movie.featured==true)
+    movies => movies.filter(movie=>movie.featured===true)
 )
 
 export const selectFeaturedTVs = createSelector(
     [selectAllTVs],
-    movies => movies.filter(movie=>movie.featured==true)
+    movies => movies.filter(movie=>movie.featured===true)
 )
 
 export const selectSpecials = special=>createSelector(
@@ -34,7 +34,12 @@ export const selectSpecials = special=>createSelector(
 
 export const selectMovieById = id => createSelector(
     [selectMovie],
-    movie => movie.movies.find(item=>item.id==id)
+    movie => movie.movies.find(item=>item.id===id)
+)
+
+export const selectSingleFilm = () => createSelector(
+    [selectMovie],
+    movie => movie.singleFilm
 )
 
 

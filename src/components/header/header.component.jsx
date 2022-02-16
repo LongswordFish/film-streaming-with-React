@@ -10,10 +10,12 @@ import CartDropDown from "../cart-dropdown/Cart-dropdown.component";
 import './header.style.scss';
 
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
+import { selectCurrentUser } from "../../redux/user/user.selectors";
 
 const Header = () => {
 
     const cartHidden = useSelector(selectCartHidden);
+    const currentUser = useSelector(selectCurrentUser);
 
     return (
 
@@ -54,12 +56,27 @@ const Header = () => {
                         <li className="nav-item">
                             <a className="nav-link active" aria-current="page" href="/user/logout">Logout</a>                
                         </li> */}
-                        <li className="nav-item">
-                            <Link className="nav-link" aria-current="page" to="/user/register">Register</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" aria-current="page" to="/user/signIn">Sign In</Link>
-                        </li>
+                        {
+                            currentUser?
+                            (
+                                <li className="nav-item">
+                                    <Link className="nav-link" aria-current="page" to="/user/logOut">Sign Out</Link>
+                                </li>           
+                            )
+                            :                                    
+                            <li className="nav-item">
+                                <Link className="nav-link" aria-current="page" to="/user/signUp">Register</Link>
+                            </li>
+                        }
+                        {
+                            currentUser?null
+                            :                                    
+                            <li className="nav-item">
+                                <Link className="nav-link" aria-current="page" to="/user/signIn">Sign In</Link>
+                            </li>
+                        }
+
+
                         <li className="nav-item cart-icon">
                             <CartIcon />
                         </li>

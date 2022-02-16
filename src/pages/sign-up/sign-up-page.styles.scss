@@ -1,4 +1,4 @@
-.sign-in {
+.sign-up {
     display: flex;
     flex-direction: column;
     width: 380px;
@@ -23,11 +23,16 @@
       color: lightgreen;
     }
 
-    .custom-button{
-        width: 135px;
-        margin: auto;
-        }
+    .button-wrapper{
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
+      margin: 30px auto;
 
+      .custom-button{
+      width: 135px;
+      }
+    } 
 
   }
   
