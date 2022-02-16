@@ -1,6 +1,5 @@
 import UserActionTypes from './user.type';
-import axios from 'axios';
-
+import setToken from '../security-utils/set-jwttoken';
 
 export const signInStart = (emailAndPassword)=> ({
     type:UserActionTypes.EMAIL_SIGN_IN_START,
@@ -48,4 +47,11 @@ export const signUpFailure = (error)=> ({
     type:UserActionTypes.SIGN_UP_FAILURE,
     payload:error
 });
+
+export const signOut = () => {
+    setToken();
+    return ({
+        type: UserActionTypes.SIGN_OUT
+    });
+}
 

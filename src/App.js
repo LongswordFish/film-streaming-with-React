@@ -18,9 +18,7 @@ import './App.css';
 
 const App = ()=>{
   let signUpSuccess = useSelector(selectSignUp);
-  console.log(`sign up is `+ signUpSuccess);
   let currentUser = useSelector(selectCurrentUser);
-  console.log("current user is "+currentUser);
   return (
     <div className="App">
             <Header />
