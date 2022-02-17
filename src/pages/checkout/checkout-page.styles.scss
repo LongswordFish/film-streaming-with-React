@@ -16,6 +16,10 @@
     .header-block {
       text-transform: capitalize;
       width: 23%;
+      text-align: center;
+      color: rgba(28, 164, 182, 0.726);
+      font-weight: bolder;
+      font-size: 1.2em;
 
       &:last-child {
         width: 8%;
@@ -44,5 +48,31 @@
     display: flex;
     justify-content: space-around;
     margin: 30px auto;
+
+    .sign-in-button{
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+  
+      background: linear-gradient(rgb(0, 92, 128) 20%,rgb(0, 81, 128) 90%);
+      border: 0px;
+      padding: 1px;
+      text-decoration: none;
+  
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      position: relative;
+      padding: 0px 12px;
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      border-radius: 4px;
+  
+      &:hover{
+          cursor: pointer;
+      }
+    }
   }
 }

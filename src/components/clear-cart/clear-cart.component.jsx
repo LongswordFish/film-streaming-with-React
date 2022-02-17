@@ -8,7 +8,7 @@ const ClearCartButton = ()=>{
     const dispatch = useDispatch();
 
     const handleClear = ()=>{
-        if (window.confirm("Are you sure you want to clear the cart?") == true) {
+        if (window.confirm("Are you sure you want to clear the cart?") === true) {
             dispatch(clearCart());
           } 
     }

@@ -7,7 +7,7 @@ const INITIAL_STATE={
 }
 
 
-const userReducer = (currentState = INITIAL_STATE,action)=>{
+const UserReducer = (currentState = INITIAL_STATE,action)=>{
     switch (action.type) {
         case UserActionTypes.SIGN_IN_SUCCESS:
             return {
@@ -44,4 +44,4 @@ const userReducer = (currentState = INITIAL_STATE,action)=>{
     }
 }
 
-export default userReducer;
+export default UserReducer;

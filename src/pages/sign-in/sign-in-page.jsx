@@ -8,7 +8,6 @@ import { signInStart } from "../../redux/user/user.actions";
 
 
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import './sign-in-page.styles.scss';
 
 class SignInPage extends React.Component{

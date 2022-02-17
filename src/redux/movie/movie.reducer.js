@@ -1,5 +1,4 @@
 import MovieActionTypes from './movie.types';
-import fakeDB from './FakeDB';
 
 
 const INITIAL_STATE = {

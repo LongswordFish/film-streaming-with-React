@@ -1,8 +1,8 @@
-import {takeLatest,put, take} from 'redux-saga/effects';
+import {takeLatest,put} from 'redux-saga/effects';
 import {all,call} from 'redux-saga/effects';
 import MovieActionTypes from './movie.types';
 
-import {getAllFilmsSuccess,getAllFilmsFailure,getSingleFilmSuccess,getSingleFilmFailure,getAllFilmsStart} from './movie.action';
+import {getAllFilmsSuccess,getAllFilmsFailure,getSingleFilmSuccess,getSingleFilmFailure} from './movie.action';
 
 const apiUrl = process.env.REACT_APP_API_URL;
 

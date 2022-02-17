@@ -1,6 +1,4 @@
-import { createStore, applyMiddleware, compose } from 'redux';
-import {logger} from 'redux-logger';
-import thunk from "redux-thunk" ;
+import { createStore, applyMiddleware } from 'redux';
 
 import rootSaga from './root-saga';
 import rootReducer from './root-reducer';

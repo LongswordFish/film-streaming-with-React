@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { getAllFilms,getAllFilmsStart } from "../../redux/movie/movie.action";
+import { getAllFilmsStart } from "../../redux/movie/movie.action";
 import "./homepage.style.scss";
 
 import { selectFeaturedMovies,selectFeaturedTVs,selectSpecials } from "../../redux/movie/movie.selectors";
@@ -21,7 +21,7 @@ const HomePage = ()=>{
 
     useEffect(()=>{
         dispatch(getAllFilmsStart());
-    },[]);
+    },[dispatch]);
 
     return(
         <div className="home-page">

@@ -1,4 +1,4 @@
-import {takeLatest,put, take} from 'redux-saga/effects';
+import {takeLatest,put} from 'redux-saga/effects';
 import {all,call} from 'redux-saga/effects';
 import UserActionTypes from './user.type';
 import axios from 'axios';
@@ -6,7 +6,7 @@ import axios from 'axios';
 import setToken from '../security-utils/set-jwttoken';
 import jwtDecode from 'jwt-decode';
 
-import {signInSuccess,signInFailure,signOutSuccess,signOutFailure,signUpSuccess,signUpFailure} from './user.actions';
+import {signInSuccess,signInFailure,signUpSuccess,signUpFailure} from './user.actions';
 
 const apiUrl = process.env.REACT_APP_API_URL;
 

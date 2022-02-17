@@ -1,0 +1,27 @@
+.order-item {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid darkgrey;
+    font-size: 20px;
+    align-items: center;
+    padding: 10px 0;
+    justify-content: space-between;
+  
+    .order-item-block {
+      width: 20%;
+      text-align: center;
+
+      &:last-child {
+        width: 30%;
+      }
+
+        .order-item-image{
+            height: 60px;
+            margin: auto 5px;
+      }
+
+    }
+
+
+  }
+  

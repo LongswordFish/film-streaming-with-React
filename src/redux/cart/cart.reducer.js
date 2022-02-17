@@ -1,23 +1,17 @@
 import CartActionTypes from "./cart.types";
-import { addPurchaseItemToCart,addRentItemToCart,removeItemFromCart } from "./cart.utils";
+import { removeItemFromCart } from "./cart.utils";
 
 const INITIAL_STATE = {
     hidden:true,
-    purchased_items:[],
-    rented_items:[],
+    items:[]
 };
 
 const CartReducer = (state=INITIAL_STATE, action)=>{
     switch (action.type) {
-        case CartActionTypes.ADD_ITEM_TO_PURCHASE_ITEMS:
+        case CartActionTypes.ADD_ITEM_TO_ITEMS:
             return {
                 ...state,
-                purchased_items:addPurchaseItemToCart(state.purchased_items,action.payload)
-            }
-        case CartActionTypes.ADD_ITEM_TO_RENT_ITEMS:
-            return {
-                ...state,
-                rented_items:addRentItemToCart(state.rented_items,action.payload)
+                items:[...state.items,action.payload]
             }
         case CartActionTypes.TOGGLE_CART_HIDDEN:
             return {
@@ -27,14 +21,12 @@ const CartReducer = (state=INITIAL_STATE, action)=>{
         case CartActionTypes.CLEAR_ITEM_FROM_CART:
             return {
                 ...state,
-                purchased_items: removeItemFromCart(state.purchased_items, action.payload),
-                rented_items:removeItemFromCart(state.rented_items, action.payload),
+                items:removeItemFromCart(state.items, action.payload),
             }
         case CartActionTypes.CLEAR_CART:
             return {
                 ...state,
-                purchased_items: [],
-                rented_items:[]
+                items:[]
             }
         default:
             return state;
